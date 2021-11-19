@@ -3,12 +3,18 @@
 " =======================================
 set nu
 syntax on
-set ffs=unix
-
+set noerrorbells
+set shiftwidth=4
 set tabstop=4
-set relativenumber
+set expandtab
+set ffs=unix
+set incsearch
+set smartindent
+set nobackup
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-filetype plugin indent on
+set relativenumber
 
 " auto format
 let g:clang_format#auto_format=1
