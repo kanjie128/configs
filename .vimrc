@@ -38,6 +38,10 @@ endif
 " =======================================
 " manage plugins with specific dir
 call plug#begin('~/.vim/plugged')
+
+"YCM vim 8.1+ required
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
 "fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
@@ -65,4 +69,18 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' } 
 
 let g:rustfmt_command = "rustfmt"
+
+
+" =======================================
+" ======= key maps       ================
+" =======================================
+let mapleader = " "
+" wincmd
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+" YCM
+nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
+nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 
