@@ -10,6 +10,8 @@ set expandtab
 set ffs=unix
 set incsearch
 set smartindent
+set ignorecase
+set smartcase
 set nobackup
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
